@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Teacher</title>
+    <link rel="stylesheet" href="add_teacher.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+      <a class="navbar-brand" href="#">
+        <img src="./nmit-logo.svg" alt="Logo" class="logo" />
+      </a>
+    </nav>
+    <div class="container">
+      <h1>Add Teacher</h1>
+      <form id="teacher-form">
+        <div class="form-group">
+          <label for="name">Teacher Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="bus-number">Bus Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="bus-number"
+            name="bus-number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="route-number">Route Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="route-number"
+            name="route-number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="phone-number">Phone Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="phone-number"
+            name="phone-number"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <script>
+      document
+        .getElementById("teacher-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const teacher = {
+            name: document.getElementById("name").value,
+            busNumber: document.getElementById("bus-number").value,
+            routeNumber: document.getElementById("route-number").value,
+            phoneNumber: document.getElementById("phone-number").value,
+          };
+
+          let teachers = JSON.parse(localStorage.getItem("teachers")) || [];
+          teachers.push(teacher);
+          localStorage.setItem("teachers", JSON.stringify(teachers));
+
+          alert("Teacher details submitted successfully.");
+          window.location.href = "teacherdetails.html";
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

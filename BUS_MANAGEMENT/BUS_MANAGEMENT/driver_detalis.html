@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Drivers</title>
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>All Drivers</h1>
+      <div class="form-group">
+        <label for="routeFilter">Enter Route Number to Filter:</label>
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" class="form-control" id="routeFilter" />
+          </div>
+        </div>
+        <button class="btn btn-primary mt-2" onclick="filterDrivers()">
+          Filter
+        </button>
+      </div>
+      <div id="allDrivers" class="row"></div>
+    </div>
+    <script src="driver_details.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Student</title>
+    <link rel="stylesheet" href="add_student.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+      <a class="navbar-brand" href="#">
+        <img src="../nmit-logo.svg" alt="Logo" class="logo" />
+      </a>
+    </nav>
+    <div class="container">
+      <h1>Add Student</h1>
+      <form id="student-form">
+        <div class="form-group">
+          <label for="name">Student Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="usn">USN:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="usn"
+            name="usn"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="bus-number">Bus Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="bus-number"
+            name="bus-number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="route-number">Route Number:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="route-number"
+            name="route-number"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="year">Year:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="year"
+            name="year"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="add_student.js"></script>
+  </body>
+</html>

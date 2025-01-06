@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Student Details</title>
+    <link rel="stylesheet" href="./studentdetails.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+      <a class="navbar-brand" href="#">
+        <img src="../nmit-logo.svg" alt="Logo" class="logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../manage_admin.html">Manage Admin</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="notificationDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img
+                src="../notification-icon.svg"
+                alt="Notifications"
+                width="30"
+                height="30"
+              />
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right"
+              aria-labelledby="notificationDropdown"
+            >
+              <h6 class="dropdown-header">Notifications</h6>
+              <div id="notification-list"></div>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item text-center" href="#"
+                >View All Notifications</a
+              >
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img
+                src="profile-pic.jpg"
+                class="rounded-circle"
+                alt="Profile"
+                width="30"
+                height="30"
+              />
+            </a>
+            <div
+              class="dropdown-menu dropdown-menu-right"
+              aria-labelledby="navbarDropdown"
+            >
+              <a class="dropdown-item" href="../view profile.html"
+                >View Profile</a
+              >
+              <a class="dropdown-item" href="../changepassword.html"
+                >Change Password</a
+              >
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="../index.html">Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Student Details</h1>
+      <div class="search-container">
+        <input type="text" id="search" placeholder="Search by name or USN" />
+        <button type="button" onclick="searchStudent()">Search</button>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>USN</th>
+            <th>Bus Number</th>
+            <th>Route Number</th>
+            <th>Year</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="student-details">
+          <!-- Student details will be populated here -->
+        </tbody>
+      </table>
+      <div class="button-container">
+        <a href="add_student.html" class="btn btn-primary">Add Student</a>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="studentdetails.js"></script>
+  </body>
+</html>

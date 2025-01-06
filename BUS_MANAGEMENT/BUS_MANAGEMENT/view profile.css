@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f0f0f0;
+}
+
+.navbar {
+  margin-bottom: 20px;
+  background-color: #007bff; /* Blue color for the navbar */
+}
+
+.navbar .nav-link {
+  color: #fff !important; /* White color for the links */
+}
+
+.navbar .navbar-brand {
+  color: #fff !important; /* White color for the brand */
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.container {
+  background: #fff;
+  padding: 30px 50px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.admin-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.details {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 12px;
+  }
+  .btn-primary {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+  .profile-pic img {
+    width: 100px;
+    height: 100px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 10px;
+  }
+  .btn-primary {
+    font-size: 12px;
+  }
+}
+
+/* Specific Device Breakpoints */
+@media (max-width: 375px) {
+  /* iPhone SE */
+  .container {
+    padding: 15px;
+  }
+  .profile-pic img {
+    width: 100px;
+    height: 100px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 12px;
+  }
+  .btn-primary {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 414px) {
+  /* iPhone XR, iPhone 12 Pro */
+  .container {
+    padding: 20px;
+  }
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 14px;
+  }
+  .btn-primary {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 430px) {
+  /* iPhone 14 Pro Max */
+  .container {
+    padding: 20px;
+  }
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 14px;
+  }
+  .btn-primary {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 411px) {
+  /* Pixel 7 */
+  .container {
+    padding: 20px;
+  }
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 14px;
+  }
+  .btn-primary {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  /* Samsung Galaxy S8+, Samsung Galaxy A51/71 */
+  .container {
+    padding: 15px;
+  }
+  .profile-pic img {
+    width: 100px;
+    height: 100px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 12px;
+  }
+  .btn-primary {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 412px) {
+  /* Samsung Galaxy S20 Ultra */
+  .container {
+    padding: 20px;
+  }
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 14px;
+  }
+  .btn-primary {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* iPad Mini, iPad Air, iPad Pro, Surface Duo */
+  .container {
+    padding: 20px;
+  }
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 14px;
+  }
+  .btn-primary {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Surface Pro 7, Nest Hub, Nest Hub Max */
+  .container {
+    padding: 25px;
+  }
+  .profile-pic img {
+    width: 150px;
+    height: 150px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 16px;
+  }
+  .btn-primary {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Galaxy Z Fold 5, Asus Zenbook Fold */
+  .container {
+    padding: 20px;
+  }
+  .profile-pic img {
+    width: 120px;
+    height: 120px;
+  }
+  .form-group input,
+  .form-group select {
+    font-size: 14px;
+  }
+  .btn-primary {
+    font-size: 14px;
+  }
+}
