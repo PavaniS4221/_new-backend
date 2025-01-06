@@ -49,7 +49,9 @@ app.get("/contact",(req,res)=>{
 app.get("/about",(req,res)=>{
     res.render("about");
 })
-
+app.get("/businchargedash",(req,res)=>{
+    res.render("businchargedash");
+})
 
 app.get("/routelist",(req,res)=>{
     res.render("routelist");
