@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="./admindashboard.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://th.bing.com/th/id/R.15481a3936d69f2f913312dd9c177e47?rik=0d%2bTRSQgV5lkKg&riu=http%3a%2f%2fnmit.ac.in%2fimg%2fnitte-nmit-logo.png&ehk=cxElERy49QBmo3g4NlTXmVVfBu3WmSAsp25Qasg%2fbpI%3d&risl=&pid=ImgRaw&r=0" alt="Logo">
+            <body style="background-image: url('https://i1.wp.com/play-lh.googleusercontent.com/ho-dqm3UBCaktOsBmenfsGHI1tzIcCPgY6WJIDOGxSqKmq45BMbUKAXrkMHim8tyt7o=w600-h300-pc0xffffff-pd'); background-size: cover; background-position: center; background-repeat: no-repeat; height: 100vh;">
+
+        </div>
+        <nav class="top-nav">
+            <ul>
+                <li><a href="#">Notification</a></li>
+                <li><a href="#">Weather</a></li>
+                <li><a href="#">Announcement</a></li>
+                <li><a href="#">Calendar</a></li>
+                <li><a href="#">Log Out</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar Toggle Button -->
+    <button id="sidebar-toggle" aria-label="Toggle sidebar">
+        ☰
+    </button>
+
+    <!-- Collapsible Navigation Sidebar -->
+    <nav id="nav-sidebar">
+        <button id="nav-close" aria-label="Close navigation sidebar">✖</button>
+        <ul>
+            <li><a href="#">Notification</a></li>
+            <li><a href="#">Weather</a></li>
+            <li><a href="#">Announcement</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Sidebar with close button for additional options -->
+        <aside id="sidebar">
+            <button id="sidebar-close" aria-label="Close sidebar">✖</button>
+            <ul>
+                <li><a href="#">Register</a></li>
+                <li><a href="./student/studentdetails.html">Student Details</a></li>
+                <li><a href="./driver details.html">Driver Details</a></li>
+                <li><a href="#">Bus Details</a></li>
+                <li><a href="#">Complaint Box</a></li>
+                <li><a href="./teacherdetails.html">Teacher Details</a></li>
+                <li><a href="#">Scheduling</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Display Section -->
+        <section class="displays">
+            <div class="section">
+                <h3>Registration</h3>
+                <ul>
+                    <li><a href="#">Student Registration</a></li>
+                    <li><a href="#">Driver Registration</a></li>
+                    <li><a href="#">Bus Registration</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>Payment Status</h3>
+                <ul>
+                    <li><a href="#">Student Payments</a></li>
+                    <li><a href="#">Driver Payments</a></li>
+                    <li><a href="#">Bus Payments</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>Route List</h3>
+                <ul>
+                    <li><a href="#">Route Details</a></li>
+                    <li><a href="#">Route Map</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>Total Seats Available</h3>
+                <ul>
+                    <li><a href="#">Seat Availability</a></li>
+                    <li><a href="#">Seat Allocation</a></li>
+                </ul>
+            </div>
+            <div class="section">
+                <h3>Pick Up Points List</h3>
+                <ul>
+                    <li><a href="#">Point Details</a></li>
+                    <li><a href="#">Point Map</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Admin Dashboard NMIT</p>
+    </footer>
+
+    <script src="./admindashboard.js"></script>
+</body>
+</html>

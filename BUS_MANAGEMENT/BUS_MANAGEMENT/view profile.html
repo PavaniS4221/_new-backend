@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Profile</title>
+    <link rel="stylesheet" href="view profile.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue">
+      <a class="navbar-brand" href="#">
+        <img src="./nmit-logo.svg" alt="Logo" class="logo" />
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Admin Dahboard</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <h1>Admin Profile</h1>
+      <div class="admin-details">
+        <div class="profile-pic">
+          <img id="profile-pic" src="profile-pic.jpg" alt="Profile Picture" />
+          <input
+            type="file"
+            id="profile-pic-upload"
+            class="form-control-file mt-2"
+          />
+        </div>
+        <div class="details">
+          <div class="form-group">
+            <label for="first-name"><strong>First Name:</strong></label>
+            <input type="text" class="form-control" id="first-name" />
+          </div>
+          <div class="form-group">
+            <label for="last-name"><strong>Last Name:</strong></label>
+            <input type="text" class="form-control" id="last-name" />
+          </div>
+          <div class="form-group">
+            <label for="contact"><strong>Contact:</strong></label>
+            <input type="text" class="form-control" id="contact" />
+          </div>
+          <div class="form-group">
+            <label for="mail"><strong>Mail:</strong></label>
+            <input type="email" class="form-control" id="mail" />
+          </div>
+          <div class="form-group">
+            <label for="gender"><strong>Gender:</strong></label>
+            <select class="form-control" id="gender">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="admin-id"><strong>Admin ID:</strong></label>
+            <input type="text" class="form-control" id="admin-id" readonly />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="saveDetails()">
+            Save Changes
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
+<script src="./view profile.js"></script>

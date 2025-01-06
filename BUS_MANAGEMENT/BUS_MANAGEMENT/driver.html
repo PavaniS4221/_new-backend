@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Driver Details</title>
+    <link rel="stylesheet" href="contact.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Driver Details</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <form id="driverForm">
+                <div class="form-group">
+                  <label for="driverName">Driver Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="driverName"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="driverPhoto">Driver Photo</label>
+                  <input
+                    type="file"
+                    class="form-control"
+                    id="driverPhoto"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="routeNumber">Route Number</label>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="routeNumber"
+                        required
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="phoneNumber"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="license">License</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="license"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="busNumber">Bus Number</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="busNumber"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h2>Driver Details</h2>
+              <div id="driverDetails" style="display: none">
+                <p>
+                  <strong>Name:</strong> <span id="displayDriverName"></span>
+                </p>
+                <p>
+                  <strong>Photo:</strong>
+                  <img
+                    id="displayDriverPhoto"
+                    alt="Driver Photo"
+                    style="max-width: 100px"
+                  />
+                </p>
+                <p>
+                  <strong>Route Number:</strong>
+                  <span id="displayRouteNumber"></span>
+                </p>
+                <p>
+                  <strong>Phone Number:</strong>
+                  <span id="displayPhoneNumber"></span>
+                </p>
+                <p>
+                  <strong>License:</strong> <span id="displayLicense"></span>
+                </p>
+                <p>
+                  <strong>Bus Number:</strong>
+                  <span id="displayBusNumber"></span>
+                </p>
+              </div>
+              <a href="driver_detalis.html" class="btn btn-secondary"
+                >View All Drivers</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="driver.js"></script>
+  </body>
+</html>
