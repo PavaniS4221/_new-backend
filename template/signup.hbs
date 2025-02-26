@@ -1,26 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
+<html>
 
-<form action="/signup" method="post">
-    <input placeholder="Name" name="name" type="text" required>
-    <br>
-    <input placeholder="Password" name="password" type="password" required>
-    <br>
-    <label for="userType">User Type:</label>
-    <select name="userType" required>
-        <option value="admin">Admin</option>
-        <option value="busIncharge">Bus Incharge</option>
-        
-    </select>
-    <br>
-    <input class="sub" type="submit" value="Sign Up">
-</form>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login-Sign Up </title>
+    <link rel="stylesheet" href="login-signup.css" />
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/" class="navbar-brand">
+                <img src="../images/nmit-logo.svg" class="logo" alt="Logo" />
+            </a>
+            <div class="menu-toggle" id="mobile-menu">&#9776;</div>
+            <ul class="nav-list" id="nav-list">
+                <li><a href="/">Home</a></li>
+                <li><a href="/admindash">Admin</a></li>
+                <li><a href="/bus-incharge/busincharge-dashboard">Bus Incharge</a></li>
+                <li><a href="https://nitte.edu.in/nmit/about-nmit-bangalore.php">About</a></li>
+                <li><a href="/routelist">Route List</a></li>
+                <li><a href="/payment">Fee Payment</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/login">Login</a></li>
+                <li><a href="/signup">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form id="signup-form" class="active-form">
+                <div class="input-group">
+                    <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email" required />
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password" required />
+                    </div>
+                    <div class="checkbox-field">
+                        <label>
+                            <input type="radio" name="role" value="admin" required /> Admin
+                        </label>
+                        <label>
+                            <input type="radio" name="role" value="student" required />
+                            Student
+                        </label>
+                        <label>
+                            <input type="radio" name="role" value="busincharge" required />
+                            Bus Incharge
+                        </label>
+                    </div>
+                </div>
+                <div class="btn-field">
+                    <button type="submit">Sign up</button>
+                    <button type="button" id="go-to-login">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="/js/login-signup.js"></script>
 </body>
+
 </html>
