@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../images/clg-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+:where(.container, form, .input-field, header) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.otp-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.otp-message {
+  font-size: 1rem;
+  color:rgb(0, 0, 0);
+  text-align: center;
+  padding: 12px 20px;
+  display: inline-block;
+  width: auto;
+  max-width: 100%;
+  margin-bottom: 70px;
+  font-weight: 500;
+  background: linear-gradient(135deg, rgb(242, 242, 242), rgb(220, 220, 220), rgb(180, 180, 180));
+  border-radius:10px;
+  
+}
+
+.otp-message i {
+  color: #4169E1;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.container {
+  background: #fff;
+  padding: 30px 65px;
+  border-radius: 12px;
+  row-gap: 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+
+.container header {
+  height: 65px;
+  width: 65px;
+  background: #4070f4;
+  color: #fff;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h4 {
+  font-size: 1.25rem;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+}
+
+form .input-field {
+  flex-direction: row;
+  column-gap: 10px;
+}
+
+.input-field input {
+  height: 45px;
+  width: 45px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1.125rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.input-field input:focus {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.input-field input::-webkit-inner-spin-button,
+.input-field input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form button {
+  margin-top: 25px;
+  width: 100%;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  padding: 9px 0;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #4070f4;
+  transition: all 0.2s ease;
+}
+
+form button:hover {
+  background: #0e4bf1;
+}
+
+
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px 30px;
+    max-width: 90%;
+  }
+
+  .container header {
+    height: 50px;
+    width: 50px;
+    font-size: 2rem;
+  }
+
+  .container h4 {
+    font-size: 1rem;
+  }
+
+  .input-field input {
+    height: 40px;
+    width: 40px;
+    font-size: 1rem;
+  }
+
+  form button {
+    font-size: 0.95rem;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px 40px;
+    max-width: 90%;
+  }
+
+  .container header {
+    height: 55px;
+    width: 55px;
+    font-size: 2.25rem;
+  }
+
+  .container h4 {
+    font-size: 1.125rem;
+  }
+
+  .input-field input {
+    height: 42px;
+    width: 42px;
+    font-size: 1.125rem;
+  }
+
+  form button {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 20px 50px;
+    max-width: 90%;
+  }
+
+  .container header {
+    height: 60px;
+    width: 60px;
+    font-size: 2.5rem;
+  }
+
+  .container h4 {
+    font-size: 1.25rem;
+  }
+
+  .input-field input {
+    height: 45px;
+    width: 45px;
+    font-size: 1.125rem;
+  }
+
+  form button {
+    font-size: 1rem;
+    padding: 9px 0;
+  }
+}
+
+@media (max-width: 1280px) {
+  .container {
+    padding: 30px 50px;
+    max-width: 90%;
+  }
+
+  .container header {
+    height: 65px;
+    width: 65px;
+    font-size: 2.5rem;
+  }
+
+  .container h4 {
+    font-size: 1.375rem;
+  }
+
+  .input-field input {
+    height: 45px;
+    width: 45px;
+    font-size: 1.25rem;
+  }
+
+  form button {
+    font-size: 1.125rem;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container {
+    padding: 40px 70px;
+    max-width: 80%;
+  }
+
+  .container header {
+    height: 70px;
+    width: 70px;
+    font-size: 2.75rem;
+  }
+
+  .container h4 {
+    font-size: 1.5rem;
+  }
+
+  .input-field input {
+    height: 50px;
+    width: 50px;
+    font-size: 1.375rem;
+  }
+
+  form button {
+    font-size: 1.25rem;
+    padding: 11px 0;
+  }
+}
+
+@media (max-width: 1500px) {
+  .container {
+    padding: 40px 70px;
+  }
+
+  .container header {
+    height: 75px;
+    width: 75px;
+    font-size: 3rem;
+  }
+
+  .container h4 {
+    font-size: 1.75rem;
+  }
+
+  .input-field input {
+    height: 55px;
+    width: 55px;
+    font-size: 1.5rem;
+  }
+
+  form button {
+    font-size: 1.375rem;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 10px 15px;
+  }
+
+  .container header {
+    height: 45px;
+    width: 45px;
+    font-size: 1.5rem;
+  }
+
+  .container h4 {
+    font-size: 0.875rem;
+  }
+
+  .input-field input {
+    height: 30px;
+    width: 30px;
+    font-size: 0.75rem;
+  }
+
+  form button {
+    font-size: 0.75rem;
+    padding: 5px 0;
+  }
+}
