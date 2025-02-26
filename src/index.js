@@ -21,6 +21,9 @@ app.use(express.static('public'));
 app.use(express.static('static'));
 app.use(bodyParser.json());
 app.use('/api/location',trackerRoutes);
+app.get('/bus-incharge/:page', (req, res) => res.render(`bus-incharge/${req.params.page}`));
+app.use('/bus-incharge/js', express.static('src/bus-incharge'));
+app.use('/js', express.static('src'));
 
 
 
