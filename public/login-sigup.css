@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../images/clg-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+
+.form-box {
+  width: 90%;
+  max-width: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 50px 60px 70px;
+  text-align: center;
+  z-index: 2;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-box h1 {
+  font-size: 30px;
+  margin-bottom: 60px;
+  color: #3c0000;
+  position: relative;
+}
+
+.form-box h1::after {
+  content: "";
+  width: 30px;
+  height: 4px;
+  border-radius: 3px;
+  background: #3000;
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.input-field {
+  background: #eaeaea;
+  margin: 15px 0;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  padding: 18px 15px;
+}
+
+.input-field i {
+  margin-left: 15px;
+  color: #999;
+}
+
+form p {
+  text-align: left;
+  font-size: 13px;
+}
+
+form p a {
+  text-decoration: none;
+  color: #3c00a0;
+}
+
+.checkbox-field {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.checkbox-field label {
+  font-size: 14px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.checkbox-field input[type="radio"] {
+  margin-right: 5px;
+}
+
+.btn-field {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-field button {
+  flex-basis: 48%;
+  background: #3c00a0;
+  color: #fff;
+  height: 40px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.input-group {
+  height: 280px;
+}
+
+.btn-field button.disable {
+  background: #eaeaea;
+  color: #555;
+}
+
+
+form.active-form {
+  display: block;
+}
+
+
+@media (max-width: 600px) {
+  .form-box {
+    padding: 20px;
+  }
+  .form-box h1 {
+    font-size: 16px;
+  }
+  input,
+  .btn-field button {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .form-box {
+    padding: 25px;
+  }
+  .form-box h1 {
+    font-size: 20px;
+  }
+  input,
+  .btn-field button {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+@media (max-width: 1024px) {
+  .form-box {
+    max-width: 600px;
+    padding: 40px;
+  }
+  .form-box h1 {
+    font-size: 24px;
+  }
+  input,
+  .btn-field button {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+@media (max-width: 1280px) {
+  .form-box {
+    max-width: 700px;
+    padding: 50px;
+  }
+  .form-box h1 {
+    font-size: 26px;
+  }
+  input,
+  .btn-field button {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
+@media (max-width: 1500px) {
+  .form-box {
+    max-width: 800px;
+    padding: 60px;
+  }
+  .form-box h1 {
+    font-size: 28px;
+  }
+  input,
+  .btn-field button {
+    font-size: 20px;
+    padding: 18px;
+  }
+}
+@media (max-width: 320px) {
+  .form-box {
+    padding: 10px;
+  }
+  .form-box h1 {
+    font-size: 14px;
+  }
+  input,
+  .btn-field button {
+    font-size: 10px;
+    padding: 8px;
+  }
+}
+
+
+/* Navbar Container */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background:white
+
+}
+
+/* Logo Styling */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+/* Navigation Menu */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap:5px;
+ margin:12px;
+}
+
+.nav-list li {
+  display: inline-block;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-list a:hover {
+  color: #0056b3; 
+}
+
+/* Responsive Navbar */
+.menu-toggle {
+  display: none;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+      font-size: 24px;
+      cursor: pointer;
+  }
+
+  .nav-list {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: white;
+      width: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+  }
+
+  .nav-list.active {
+      display: flex;
+  }
+
+  .nav-list a {
+      display: block;
+      padding: 10px;
+      text-align: center;
+  }
+}
