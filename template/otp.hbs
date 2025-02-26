@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTP Verification</title>
+  <link rel="stylesheet" href="otp.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="otp-wrapper">
+    <div class="otp-message">
+      <i class="fas fa-envelope"></i> We have sent a
+      <strong>One-Time Password (OTP)</strong> to your registered email.
+      <br> <i class="fas fa-key"></i> Please enter the code below to proceed.
+    </div>
+
+    <div class="container">
+      <header>
+        <i class="bx bxs-check-shield"></i>
+      </header>
+      <div id="otp-step">
+        <h4>Enter OTP Code</h4>
+        <form id="otp-form">
+          <div class="input-field">
+            <input type="number" required oninput="moveToNext(this, 1)" />
+            <input type="number" required disabled oninput="moveToNext(this, 2)" />
+            <input type="number" required disabled oninput="moveToNext(this, 3)" />
+            <input type="number" required disabled />
+          </div>
+          <button type="submit">Verify OTP</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/otp.js"></script>
+</body>
+
+</html>
