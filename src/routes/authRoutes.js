@@ -8,8 +8,9 @@ router.get("/routelist", (req, res) => res.render("routelist"));
 router.get("/contact", (req, res) => res.render("contact"));
 router.get("/about", (req, res) => res.render("about"));
 router.get("/tracker", (req, res) => res.render("tracker"));
-
-router.get("/businchargedash", (req, res) => res.render("businchargedash"));
+router.get("/otp", (req, res) => res.render("otp"));
+router.get("/busincharge-dashboard", (req, res) => res.render("busincharge-dashboard"));
+router.get("/resetpassword", (req, res) => res.render("resetpassword"));
 
 router.post("/login",authController.login);
 router.post("/signup",authController.signup);
