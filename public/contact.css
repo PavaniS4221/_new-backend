@@ -1,0 +1,96 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin:0;
+    padding:0;
+}
+
+.container {
+    width: 100%;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filter {
+    text-align: left;
+}
+
+.transport-office {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(78, 11, 11, 0.8);
+}
+
+select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px;
+}
+
+select:hover,
+select:focus {
+    border-color: #9e1010;
+    box-shadow: 0 0 8px rgba(206, 19, 19, 0.5);
+}
+
+select option:hover {
+    background: linear-gradient(45deg, #ce1313, #9e1010);
+
+}
+
+p.contact {
+    color: rgb(0, 0, 124);
+}
+
+.route-card {
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #007bff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.route-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.route-info {
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    font-size: 24px;
+    color: #007bff;
+    margin-right: 15px;
+}
+
+.route-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: #f1f9ff;
+}
+
+.contact {
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#routes h3 {
+    font-size: 20px;
+}
