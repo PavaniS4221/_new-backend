@@ -1,0 +1,127 @@
+.inquiry-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: auto;
+    width: 100%;
+}
+
+
+.inquiry-container p {
+    color: #7f8c8d;
+    margin-bottom: 30px;
+}
+
+.inquiry-container label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+
+.inquiry-container .name-container {
+    display: flex;
+    gap: 10px;
+}
+
+.inquiry-container input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 10px;
+}
+
+.inquiry-container button {
+    background: linear-gradient(135deg, #287bff, #4489ff);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    border-radius: 18px;
+}
+
+.inquiry-container button:hover {
+    background: linear-gradient(135deg, #1a5fd3, #25477d); 
+}
+
+.inquiry-container span{
+    color:red;
+}
+.priority-container {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.priority-container label {
+    display: flex;
+  text-align: justify;
+    gap: 0.8rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease;
+    font-weight: 500;
+
+}
+
+.priority-container input[type="radio"] {
+    appearance: none; 
+    width: 18px;
+    height: 18px;
+    border: 2px solid #bbb;
+    border-radius: 50%;
+    position: relative;
+    background-color: #fff;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    margin-top: 0;
+}
+
+.priority-container input[type="radio"]:checked {
+    border-color: transparent; 
+    background-color: #fff;
+}
+
+.priority-container input[type="radio"]:checked.low {
+    background-color: #f44336;
+}
+
+.priority-container input[type="radio"]:checked.medium {
+    background-color: #fae20c; 
+}
+
+.priority-container input[type="radio"]:checked.high {
+    background-color: #4CAF50; 
+}
+
+.priority-container input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    background-color: white;
+    border-radius: 50%;
+    top: 5px;
+    right:3.8px;
+  
+}
+
+.priority-container input[type="radio"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.2); 
+}
+
+.priority-container input[type="radio"]:not(:checked):hover {
+    border-color: #bbb;
+}
+
+
+.priority-container label span {
+    font-size: 1rem;
+    color: #333; 
+}
