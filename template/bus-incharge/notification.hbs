@@ -11,6 +11,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
 </head>
 
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io("http://localhost:4000");
+
+  const userId = "{{user._id}}";
+  const role = "{{user.role}}";
+
+  socket.emit("register", { userId, role });
+
+  socket.on("notify", (data) => {
+    const toast = document.createElement("div");
+    toast.className = "alert alert-info";
+    toast.innerText = "🔔 " + data.message;
+
+    const target = document.getElementById("toast-container") || document.body;
+    target.prepend(toast);
+    setTimeout(() => toast.remove(), 7000);
+  });
+</script>
+
 <body>
     <div class="container-fluid">
         <!-- Navigation -->

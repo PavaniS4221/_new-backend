@@ -48,6 +48,8 @@ exports.verifyOTP = (req, res) => {
   if (Date.now() > data.expires) return res.status(400).json({ message: "OTP expired" });
   if (data.otp !== otp) return res.status(400).json({ message: "Invalid OTP" });
 
-  otpStore.delete(email); // clear OTP after verification
-  res.status(200).json({ message: "OTP verified successfully" });
+  otpStore.delete(email);
+  req.session.resetEmail = email; // ✅ store email in session
+  res.redirect("/resetpassword"); // go to reset password page
 };
+

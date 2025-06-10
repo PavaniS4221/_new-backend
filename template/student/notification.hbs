@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Notifications</title>
+  <link rel="stylesheet" href="/notification.css">
+</head>
+<body>
+  <h2>🔔 Notifications</h2>
+
+  <!-- Notification History -->
+  <div id="notification-list">
+    {{#each notifications}}
+      <div class="notification-card">
+        <p><strong>{{this.message}}</strong></p>
+        <small>{{this.createdAt}}</small>
+      </div>
+    {{/each}}
+  </div>
+
+  <!-- Realtime Notifications -->
+  <div id="toast-container" style="margin-top: 20px;"></div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io("http://localhost:4000");
+    socket.emit("register", {
+      userId: "{{user._id}}",
+      role: "{{user.role}}"
+    });
+
+    socket.on("notify", (data) => {
+      const div = document.createElement("div");
+      div.className = "notification-card";
+      div.innerHTML = `<p><strong>🔔 ${data.message}</strong></p>`;
+      document.getElementById("toast-container").prepend(div);
+      setTimeout(() => div.remove(), 10000);
+    });
+  </script>
+</body>
+</html>

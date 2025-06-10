@@ -142,30 +142,26 @@ exports.resetpassword = async (req, res) => {
   const { email, newPassword, confirmPassword } = req.body;
 
   try {
-    // Validate password match
     if (newPassword !== confirmPassword) {
       return res.render("resetpassword", { message: "Passwords do not match." });
     }
 
-    // Find user
-    const user = await User.findOne({ email });
+    const user = await LogInCollection.findOne({ email }); // ✅ FIXED
     if (!user) {
       return res.render("resetpassword", { message: "User not found." });
     }
 
-    // Hash and update password
     const hashedPassword = await bcrypt.hash(newPassword, 10);
     user.password = hashedPassword;
     await user.save();
 
-    // Redirect to loginform
     res.redirect("/loginform");
-
   } catch (error) {
     console.error("Error resetting password:", error);
     res.status(500).render("resetpassword", { message: "Something went wrong. Try again." });
   }
 };
+
 
 
 

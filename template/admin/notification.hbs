@@ -12,6 +12,28 @@
       /* Add your CSS styles here */
     </style>
   </head>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const socket = io("http://localhost:4000");
+
+  const userId = "{{user._id}}";
+  const role = "{{user.role}}";
+
+  socket.emit("register", { userId, role });
+
+  socket.on("notify", (data) => {
+    const toast = document.createElement("div");
+    toast.className = "alert alert-info";
+    toast.innerText = "🔔 " + data.message;
+
+    const target = document.getElementById("toast-container") || document.body;
+    target.prepend(toast);
+    setTimeout(() => toast.remove(), 7000);
+  });
+</script>
+
+
   <body>
     <!-- Navbar -->
     <nav class="navbar">
@@ -84,6 +106,23 @@
     <!-- Main Content -->
     <div class="container">
       <h1>Notifications</h1>
+        <!-- Admin Notification Form -->
+<form action="/api/notifications/send" method="POST" style="margin-top: 20px; background: #f9f9f9; padding: 1rem; border-radius: 6px;">
+  <label for="recipientRole" style="font-weight: bold;">Send To:</label>
+  <select name="recipientRole" required style="width: 100%; padding: 0.5rem; margin-top: 0.5rem;">
+    <option value="all">All</option>
+    <option value="student">Students</option>
+    <option value="busincharge">Bus-Incharge</option>
+    <option value="admin">Admins</option>
+  </select>
+
+  <label for="message" style="font-weight: bold; margin-top: 1rem; display: block;">Message:</label>
+  <textarea name="message" required placeholder="Type your notification here..." style="width: 100%; height: 100px; padding: 0.5rem; margin-top: 0.5rem;"></textarea>
+
+  <button type="submit" style="background-color: #007bff; color: white; border: none; padding: 0.6rem 1rem; margin-top: 1rem; cursor: pointer;">
+    Send Notification
+  </button>
+</form>
 
       <!-- Search Bar -->
       <div class="search-bar">
